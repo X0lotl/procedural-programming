@@ -2,6 +2,9 @@
 #include "sum.h"
 
 int main() {
-    std::cout << sum(2, 2) << std::endl;
+
+    std::cout << "Sum for n = 20; x = 5" << sum(20, 5) << std::endl;
+
     return 0;
+
 }

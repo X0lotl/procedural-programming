@@ -1,9 +1,9 @@
 //
 // Created by x0lotl on 9/14/22.
 //
-float sum(int number, int x) {
+double sum(int number, int x) {
 
-    float sum = 0;
+    double sum = 0;
 
     for (int k = 0; k <= number; k++) {
 
@@ -15,13 +15,13 @@ float sum(int number, int x) {
             x_pow_k *= x;
         }
 
-        int k_fact = 1;
+        long long k_fact = 1;
 
         for (int i = 2; i <= k; i++) {
             k_fact *= i;
         }
 
-        sum += (float) (multiplier * (multiplier + x_pow_k)) / (float) k_fact;
+        sum += (double) (multiplier * x_pow_k) / (double) k_fact;
     }
 
     return sum;
