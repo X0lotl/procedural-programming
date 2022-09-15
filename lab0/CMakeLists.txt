@@ -3,4 +3,4 @@ project(lab0)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(lab0 main.cpp sum.cpp)
+add_executable(lab0 main.cpp sum.cpp sin.cpp sin.h)
