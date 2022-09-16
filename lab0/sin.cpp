@@ -20,7 +20,7 @@ double calculateSum(int k, double x) {
 	return (double) (multiplier * x_pow_2k_p_1) / (double) fact_2k_p_1;
 }
 
-double module_a (double a) {
+double module_a(double a) {
 	return a >= 0 ? a : -a;
 }
 
