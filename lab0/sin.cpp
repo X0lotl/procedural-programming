@@ -20,27 +20,18 @@ double calculateSum(int k, double x) {
 	return (double) (multiplier * x_pow_2k_p_1) / (double) fact_2k_p_1;
 }
 
+double module_a (double a) {
+	return a >= 0 ? a : -a;
+}
+
 double sin(double x, double E) {
 	double sum = 0;
-	int k = 0;
 
-	while (true) {
+	double a = calculateSum(0, x);
 
-		double a = calculateSum(k, x);
-
-		double module_a = a;
-		if (a < 0) {
-			module_a = -a;
-		}
-
+	for (int k = 0; module_a(a) >= E; k++) {
+		a = calculateSum(k, x);
 		sum += a;
-
-		if (module_a < E) {
-			break;
-		}
-
-
-		k++;
 	}
 
 	return sum;

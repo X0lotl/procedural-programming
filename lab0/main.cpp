@@ -16,7 +16,7 @@ int main() {
 	std::cout << "Greatest common denominator of 100 and 25, using loop: " << greatest_common_denominator_loop(100, 25)
 						<< " Using recursive: " << greatest_common_denominator_recursive(100, 25) << std::endl;
 
-	std::cout << "Chebyshev Polynomial for n = 10 and x = 2" << chebyshev_polynomial(3, 2) << std::endl;
+	std::cout << "Chebyshev Polynomial for n = 10 and x = 2 is: " << chebyshev_polynomial(10, 2) << std::endl;
 
 	return 0;
 }
