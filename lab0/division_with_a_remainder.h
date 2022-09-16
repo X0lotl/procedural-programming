@@ -4,4 +4,4 @@
 
 #pragma once
 
-int division(int m, int n);
+unsigned int division(unsigned int m,unsigned int n);
