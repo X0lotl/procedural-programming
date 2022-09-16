@@ -3,26 +3,26 @@
 //
 double sum(int number, int x) {
 
-    double sum = 0;
+	double sum = 0;
 
-    for (int k = 0; k <= number; k++) {
+	for (int k = 0; k <= number; k++) {
 
-        int multiplier = 1 - (2 * (k % 2));
+		int multiplier = 1 - (2 * (k % 2));
 
-        int x_pow_k = x;
+		int x_pow_k = x;
 
-        for (int i = 1; i < k; i++) {
-            x_pow_k *= x;
-        }
+		for (int i = 1; i < k; i++) {
+			x_pow_k *= x;
+		}
 
-        long long k_fact = 1;
+		long long k_fact = 1;
 
-        for (int i = 2; i <= k; i++) {
-            k_fact *= i;
-        }
+		for (int i = 2; i <= k; i++) {
+			k_fact *= i;
+		}
 
-        sum += (double) (multiplier * x_pow_k) / (double) k_fact;
-    }
+		sum += (double) (multiplier * x_pow_k) / (double) k_fact;
+	}
 
-    return sum;
+	return sum;
 }
