@@ -1,6 +1,7 @@
 //
 // Created by x0lotl on 9/14/22.
 //
+
 double sum(int number, int x) {
 
 	double sum = 0;

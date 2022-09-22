@@ -11,12 +11,13 @@ int main() {
 
 	std::cout << "Sin for x = 0.5; E = 0.0001 is: " << sin(0.5, 0.0001) << std::endl;
 
-	std::cout << "Division m/n , where m = 100, n = 8 is: " << division(100, 8) << " Referent: " << 100 / 8 << std::endl;
+	std::cout << "Division m/n , where m = 100, n = 8 is: " << division(100, 8)
+	<< " Referent: " << 100 / 8 << std::endl;
 
 	std::cout << "Greatest common denominator of 100 and 25, using loop: " << greatest_common_denominator_loop(100, 25)
 						<< " Using recursive: " << greatest_common_denominator_recursive(100, 25) << std::endl;
 
-	std::cout << "Chebyshev Polynomial for n = 10 and x = 2 is: " << chebyshev_polynomial(10, 2) << std::endl;
+	std::cout  << "Chebyshev Polynomial for n = 10 and x = 2 is: " << chebyshev_polynomial(10, 2) << std::endl;
 
 	return 0;
 }
