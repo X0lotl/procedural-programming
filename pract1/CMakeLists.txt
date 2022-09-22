@@ -3,4 +3,4 @@ project(pract1)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(pract1 main.cpp)
+add_executable(pract1 main.cpp cmake-build-debug/power_series.cpp power_series.h)

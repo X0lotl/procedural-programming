@@ -1,6 +1,7 @@
 #include <iostream>
+#include "power_series.h"
 
 int main() {
-	std::cout << "Hello, World!" << std::endl;
+	std::cout << myExp(2, 2) << std::endl;
 	return 0;
 }
