@@ -3,15 +3,17 @@
 //
 #include "cmath"
 
-int fact(int n) {
+long long fact(int n) {
 	return std::tgamma(n + 1);
 }
 
-double myExp(double x, int n) {
-	double output = 0;
+long double myExp(double x, int n) {
+	long double output = 1;
+	double pow = x;
 
-	for(int i = 0; i <= n; i++) {
-			output += pow(x, i)/ fact(i);
+	for(int i = 1; i <= n; i++) {
+			output += (double)  pow/ fact(i);
+			pow *= x;
 	}
 
 	return output;

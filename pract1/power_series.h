@@ -4,4 +4,4 @@
 
 #pragma once
 
-double myExp(double x, int n);
+long double myExp(double x, int n);

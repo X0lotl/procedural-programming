@@ -3,4 +3,4 @@
 //
 #pragma once
 
-double sum(int number, int x);
+double sum(int number, double x);

@@ -2,7 +2,7 @@
 // Created by x0lotl on 9/14/22.
 //
 
-double sum(int number, int x) {
+double sum(int number, double x) {
 
 	double sum = 0;
 
@@ -10,7 +10,7 @@ double sum(int number, int x) {
 
 		int multiplier = 1 - (2 * (k % 2));
 
-		int x_pow_k = x;
+		double x_pow_k = x;
 
 		for (int i = 1; i < k; i++) {
 			x_pow_k *= x;
