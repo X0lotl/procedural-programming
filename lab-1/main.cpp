@@ -24,6 +24,5 @@ int main() {
 
 	std::cout << "MAX/MIN x for tg(x) = 1.5 / -1";
 
-
 	return 0;
 }
