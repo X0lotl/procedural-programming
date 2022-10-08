@@ -8,3 +8,5 @@ class powOutput;
 
 powOutput myPow(double x, int n);
 powOutput quickPow (double x, int n);
+powOutput quickPowRecurcive(double x, int n, int counter);
+powOutput myPowRecurcive(double x, int n, int counter);

@@ -2,9 +2,7 @@
 // Created by x0lotl on 10/7/22.
 //
 
-#include <iostream>
 #include "powOutput.h"
-#include "map"
 
 
 powOutput myPow(double x, int n) {
@@ -20,28 +18,43 @@ powOutput myPow(double x, int n) {
 }
 
 powOutput quickPow(double x, int n) {
-	int counter = 0;
 	double output = 1;
+	int counter = 0;
 
-	std::map<int, double> defaultPows;
-
-	double tempPow = x;
-
-	for (int i = 1; i < n; i *= 2) {
-		defaultPows.insert(std::pair<int, double>(i, tempPow));
-		tempPow *= tempPow;
-		counter++;
-	}
-
-	int tempPower = 0;
-	for (auto it = --(defaultPows.cend()); tempPower < n; --it) {
-		if (tempPower + it->first <= n ) {
-			output *= it->second;
-			tempPower += it->first;
+	while (n != 0) {
+		if (n % 2 == 1) {
+			output *= x;
 		}
-
+		x *= x;
+		n /= 2;
 		counter++;
 	}
 
 	return {output, counter};
 }
+
+powOutput myPowRecurcive(double x, int n, int counter) {
+	powOutput tempPowOutput = powOutput(0, 0);
+	if (n != 0) {
+		tempPowOutput = myPowRecurcive(x, n - 1, counter++);
+		return {x * tempPowOutput.result, counter + tempPowOutput.counter};
+	} else {
+		return {1, counter + tempPowOutput.counter};
+	}
+}
+
+powOutput quickPowRecurcive(double x, int n, int counter) {
+	powOutput tempPowOutput = powOutput(0,0);
+
+	if (n == 0) {
+		return {1, counter + tempPowOutput.counter};
+	}
+	if (n % 2 == 0) {
+		tempPowOutput = quickPowRecurcive(x, n / 2, counter++);
+		return {tempPowOutput.result * tempPowOutput.result, counter + tempPowOutput.counter};
+	} else {
+		tempPowOutput = quickPowRecurcive(x, n - 1, counter++);
+		return {x * tempPowOutput.result, counter + tempPowOutput.counter};
+	}
+}
+
