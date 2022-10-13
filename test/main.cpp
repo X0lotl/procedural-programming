@@ -1,6 +1,8 @@
 #include <iostream>
 
 int main() {
-	std::cout << 1/0 << std::endl;
+	int value = 3;
+	std::cout << value/2 * 2 << " " << ((value >> 1) <<	 1) << std::endl;
 	return 0;
 }
+
