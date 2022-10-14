@@ -7,6 +7,7 @@ int main() {
 		std::cout << "Gause for x: " << i << " = " << myGause(i) << std::endl;
 	}
 
-	std::cout << "\nMy exp for x: 10 = " << myExp(10.5) << " Expected: " << exp(10.5) << std::endl;
+	std::cout << "\nMy exp for x: 10.9 = " << myExp(10.9) << " Expected: " << exp(10.9) << std::endl;
+
 	return 0;
 }
