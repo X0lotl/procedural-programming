@@ -1,7 +1,8 @@
 //
 // Created by x0lotl on 10/13/22.
-//'
+//
 #include "cmath"
+#include <iostream>
 
 double myGause(int x) {
 	double result = x;
@@ -12,11 +13,12 @@ double myGause(int x) {
 	double previousResult;
 	int multiplayer;
 	double difference = 1;
+//	double tempResult = 0;
 
 	for (int i = 1; difference >= 0.00000001; i++) {
 		previousResult = result;
 
-		if (i % 2 == 0)
+		if (i % 2 != 0)
 			multiplayer = -1;
 		else
 			multiplayer = 1;
@@ -24,6 +26,10 @@ double myGause(int x) {
 		pow *= (x * x);
 		factorial *= i;
 		number += 2;
+
+//		tempResult = multiplayer * ((double)(powX)/(double)(number * factorial));
+//		std::cout << "Temp result: " << tempResult << std::endl;
+
 		result += multiplayer * ((double)(powX)/(double)(number * factorial));
 		difference = std::abs(result - previousResult);
 	}
