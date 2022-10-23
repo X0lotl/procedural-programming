@@ -4,19 +4,16 @@
 #include "cmath"
 
 double M (double a, double b) {
-	double limA = a;
-	double limB = b;
-
 	double previousA = a;
 	double previousB = b;
 
-
-	for (int n = 1; limA != limB; n++) {
+	for (int n = 1; a != b; n++) {
 			a = std::sqrt(previousA*previousB);
 			b = (previousA + previousB)/2;
-			limA += a;
-			limB += b;
+
+			previousA = a;
+			previousB = b;
 	}
 
-	return limA;
+	return a;
 }
