@@ -1,6 +1,8 @@
 #include <iostream>
+#include "sort.h"
+#include "string"
 
 int main() {
-	std::cout << "Hello, World!" << std::endl;
+	testSortArray();
 	return 0;
 }
