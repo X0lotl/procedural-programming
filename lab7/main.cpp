@@ -1,7 +1,10 @@
 #include <iostream>
+#include "quickFib.h"
 
-int main()
-{
-    std::cout<<"Hello, World!"<<std::endl;
-    return 0;
+int main() {
+  static int fibNumber = 10;
+
+  std::cout << "Fibonacci of number: " << fibNumber << " = " << quickFib(fibNumber) << std::endl;
+
+  return 0;
 }
