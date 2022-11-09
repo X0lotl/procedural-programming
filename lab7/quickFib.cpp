@@ -2,8 +2,6 @@
 // Created by x0lotl on 09.11.22.
 //
 
-#include <iostream>
-
 struct Matrix2x2 {
     int _11, _12, _21, _22;
 };
@@ -20,7 +18,6 @@ int quickFib(int fibNumber) {
   Vector2 outputVector = {1, 0};
 
   for (int i = 1; i < fibNumber; i++) {
-
     Vector2 tempVector{
       defaultMatrix._11 * outputVector._1 + defaultMatrix._12 * outputVector._2,
       defaultMatrix._21 * outputVector._1 + defaultMatrix._22 * outputVector._2
