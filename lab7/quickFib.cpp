@@ -17,18 +17,17 @@ int quickFib(int fibNumber) {
     1, 1, 1, 0
   };
 
-  Matrix2x2 outputMatrix = defaultMatrix;
+  Vector2 outputVector = {1, 0};
 
   for (int i = 1; i < fibNumber; i++) {
-    Matrix2x2 tempMatrix{
-      outputMatrix._11 * defaultMatrix._11 + outputMatrix._12 * defaultMatrix._21,
-      outputMatrix._11 * defaultMatrix._12 + outputMatrix._12 * defaultMatrix._22,
-      outputMatrix._21 * defaultMatrix._11 + outputMatrix._22 * defaultMatrix._21,
-      outputMatrix._21 * defaultMatrix._12 + outputMatrix._22 * defaultMatrix._22
+
+    Vector2 tempVector{
+      defaultMatrix._11 * outputVector._1 + defaultMatrix._12 * outputVector._2,
+      defaultMatrix._21 * outputVector._1 + defaultMatrix._22 * outputVector._2
     };
 
-    outputMatrix = tempMatrix;
+    outputVector = tempVector;
   }
 
-  return outputMatrix._21;
+  return outputVector._1;
 }
