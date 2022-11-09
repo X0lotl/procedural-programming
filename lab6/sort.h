@@ -3,4 +3,5 @@
 //
 #pragma once
 
-void testSortArray();
+int * testSortArray();
+void bubbleSort(int *arrayPtr, int n);
