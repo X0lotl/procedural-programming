@@ -17,9 +17,7 @@ int quickFib(int fibNumber) {
     1, 1, 1, 0
   };
 
-  Matrix2x2 outputMatrix{};
-
-  outputMatrix = defaultMatrix;
+  Matrix2x2 outputMatrix = defaultMatrix;
 
   for (int i = 1; i < fibNumber; i++) {
     Matrix2x2 tempMatrix{
