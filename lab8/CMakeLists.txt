@@ -3,4 +3,4 @@ project(lab8)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(lab8 main.cpp quickPow.cpp)
+add_executable(lab8 main.cpp quickPow.cpp quickPow.h quickFibMatrixRecursive.cpp quickFibMatrixRecursive.h)

@@ -1,6 +1,7 @@
 #include <iostream>
+#include "quickFibMatrixRecursive.h"
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
-    return 0;
+  int counter = 0;
+  std::cout << quickFibNumber(10, counter) << " : " << counter;
 }
