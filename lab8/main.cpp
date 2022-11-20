@@ -1,6 +1,7 @@
 #include <iostream>
 #include "quickFibMatrixRecursive.h"
 #include "pow.h"
+#include "fibonacci.h"
 
 int main() {
   int counter = 0;
@@ -12,6 +13,13 @@ int main() {
       std::cout << i << "^" << j << " = " << power(i, j, ++counter) << " with number of operations: " << counter << std::endl;
     }
   }
+
+  std::cout << "\nTest fibonacci: " << std::endl;
+  for (int i = 1; i < 20; i++) {
+    counter = 0;
+    std::cout << i << " Fib number = " << Fibonaci(i, counter) << " with number of operations: " << counter << std::endl;
+  }
+
 
   std::cout << "\nTest FibNumberMatrix: " << std::endl;
   for (int i = 1; i < 20; i++) {
