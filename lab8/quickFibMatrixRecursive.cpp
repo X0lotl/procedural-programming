@@ -16,10 +16,13 @@ Matrix2x2 matrixMultiplication(Matrix2x2 m1, Matrix2x2 m2) {
     (m1._11 * m2._21 + m1._12 * m2._22),
     (m1._21 * m2._11 + m1._22 * m2._21),
     (m1._21 * m2._12 + m1._22 * m2._22)
-  };;
+  };
 }
 
 Matrix2x2 quickPowMatrixRecursive(Matrix2x2 matrix, int powNumber, int &counter) {
+  if (powNumber == 0) {
+    return {1,1,1,0};
+  }
   if (powNumber == 1) {
     return {1, 1, 1, 0};
   }
