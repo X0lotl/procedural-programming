@@ -6,4 +6,4 @@
 
 #include <functional>
 
-double simpson(double a, double b, int n, const std::function<double (double)> &function);
+double simpson(double a, double b, double(*function)(double, double, double), double eps, double aForFunc, double bForFunc);
