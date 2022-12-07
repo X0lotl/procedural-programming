@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.24)
-project(lab5)
+project(control)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(lab5 main.cpp Gorner.h Gorner.cpp)
+add_executable(control main.cpp)
