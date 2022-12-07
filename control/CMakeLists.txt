@@ -3,4 +3,4 @@ project(control)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(control main.cpp)
+add_executable(control main.cpp Sum.cpp Sum.h Harmonic-geometric.cpp Harmonic-geometric.h ChangeBits.cpp ChangeBits.h)
