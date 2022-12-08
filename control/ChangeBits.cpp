@@ -1,7 +1,6 @@
 //Danylo Khomichenko
 
 #include <bitset>
-#include <iostream>
 
 unsigned int changeBits(unsigned int word) {
   std::bitset<32> bitSetOfWord(word);
@@ -17,10 +16,6 @@ unsigned int changeBits(unsigned int word) {
     
    }
  }
-
-  
-  std::cout << "Bits before changing : " << saveBitSet << std::endl;
-  std::cout << "Bits after changing : " << bitSetOfWord << std::endl;
 
   return (unsigned int) bitSetOfWord.to_ullong();
 //
